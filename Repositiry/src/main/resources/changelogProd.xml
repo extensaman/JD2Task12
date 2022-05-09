@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="1" author="home" context="example-context">
+        <sql>
+            create table student (
+            id int auto_increment,
+            surname varchar(50),
+            name varchar(40),
+            patronymic varchar(45),
+            group varchar(30),
+            date_of_birth date,
+            constraint student_pk primary key (id)
+            );
+            insert into student (surname, name, patronymic, group, date_of_birth) values
+            ('Ivanov', 'Ivan', 'Ivanovich','050504','2000-1-23'),
+            ('Petrov', 'Petr', 'Petrovich','050504','1999-4-12');
+        </sql>
+    </changeSet>
+</databaseChangeLog>
