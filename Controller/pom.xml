@@ -51,7 +51,7 @@
 
 
         <dependency>
-            <groupId>by.academy.it.task11</groupId>
+            <groupId>by.academy.it.task12</groupId>
             <artifactId>Service</artifactId>
             <version>${service-version}</version>
         </dependency>

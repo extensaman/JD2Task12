@@ -12,12 +12,16 @@
             surname varchar(50),
             name varchar(40),
             patronymic varchar(45),
-            group varchar(30),
+            studying_group varchar(30),
             date_of_birth date,
             constraint student_pk primary key (id)
             );
-            insert into student (surname, name, patronymic, group, date_of_birth) values
+            insert into student (surname, name, patronymic, studying_group, date_of_birth) values
             ('Ivanov', 'Ivan', 'Ivanovich','050504','2000-1-23'),
+            ('Jameson', 'Kevin', '','050503','2001-2-14'),
+            ('Bond', 'James', '','050501','2002-12-3'),
+            ('Clinton', 'Bill', '','050505','2000-8-9'),
+            ('Jonson', 'Boris', '','050506','2020-4-12'),
             ('Petrov', 'Petr', 'Petrovich','050504','1999-4-12');
         </sql>
     </changeSet>

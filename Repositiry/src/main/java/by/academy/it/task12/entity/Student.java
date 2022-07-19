@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Calendar;
 
 @NoArgsConstructor
@@ -18,7 +19,7 @@ import java.util.Calendar;
 @Data
 @Entity
 @Table
-public class Student {
+public class Student implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,7 +33,7 @@ public class Student {
     @Column(length = 45)
     private String patronymic;
 
-    @Column(length = 30)
+    @Column(length = 30, name = "studying_group")
     private String group;
 
     @Column(name = "date_of_birth")
